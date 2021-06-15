@@ -10,6 +10,9 @@ if(minutes.length == 1){
 }
 //get the current seconds
 let seconds = today.getSeconds();
+if(seconds.length == 1){
+    seconds = '0' + seconds;
+}
 //set the current time as hours, minutes and seconds
 let time = hours + ":" + minutes + ":" + seconds;
 console.log(time);
