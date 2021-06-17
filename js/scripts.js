@@ -1,5 +1,6 @@
+// grab all of the digital number container, this is a global variable so can be used inside of all functions
 let container = document.querySelectorAll('.digitalNumberContainer');
-
+//this function will call in the getCurrentTime function with a 200ms delay
 function outputTime() {
     setTimeout(getCurrentTime, 200);
 }
@@ -28,12 +29,14 @@ function getCurrentTime(){
 }
 // Begins
 outputTime();
-
+//This function updates 2 containers at a time for hours/ minutes/ seconds
 function outputTimeVisualization(time,type){
+    //make current time (number) a string because we need 2 characters (preprending 0 where needed)
     time = time.toString();
     if(time.length == 1){
         time = '0' + time;
     }
+    //changing which output gets updated based on which type of time we were given
     switch(type){
         case 'hours':
             //output to 0 and 1
@@ -52,7 +55,7 @@ function outputTimeVisualization(time,type){
             break;
     }
 }
-
+//in the containers for each digital output, these are the elements required to represent each number by their array key
 let arrOutputs = [
     [1,2,3,5,6,7],
     [3,6],
@@ -66,35 +69,28 @@ let arrOutputs = [
     [1,2,3,4,6]
 ];
 
+//this function specifically updates the number when called in for a single container
 function updateDigitalNumberDisplay(number,container){
-    
+    //get the current outputs that need to be lit
     arrLightUp = arrOutputs[number];
+    //loop through all of the children of the parent container
     for(counter=0; counter < container.childNodes.length; counter++){
+        //select the current child
         let currentOutput = container.childNodes[counter];
+        //make the background blank because this could have been a different number previously
         if(currentOutput.style){
             currentOutput.style.background = 'none';
         }
+        //loop through each of the 
         for(x=0; x < arrLightUp.length; x++){
-            // console.log(arrLightUp[x]);
+            //get the class name for lighting up
             let elementToLight = 'output'+arrLightUp[x];
-            // console.log(elementToLight);
             if(currentOutput.classList){
-                
+                //if the classname for lighting up matched the current child class, colour in the background
                 if(currentOutput.classList.contains(elementToLight)){
                     currentOutput.style.background = 'red';
                 }
             }
-            // console.log(container.childNodes[counter].classList);
         }
     }
 }
-
-// updateDigitalNumberDisplay(1,container[0]);
-// updateDigitalNumberDisplay(2,container[1]);
-// updateDigitalNumberDisplay(3,container[2]);
-// updateDigitalNumberDisplay(4,container[3]);
-// updateDigitalNumberDisplay(5,container[4]);
-// updateDigitalNumberDisplay(6,container[5]);
-// // updateDigitalNumberDisplay(7);
-// updateDigitalNumberDisplay(8);
-// updateDigitalNumberDisplay(9);
