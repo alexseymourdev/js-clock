@@ -3,22 +3,21 @@ body{
 }
 .digitalClockContainer{
     display:flex;
-    justify-content: space-between;
+    justify-content: left;
 }
 .digitalNumberContainer{
     position:relative;
     width:80px;
     height:150px;
+    margin-left:20px;
 }
 .vertical{
     width:10px;
     height:50px;
-    background:red;
 }
 .horizontal{
     width:50px;
     height:10px;
-    background:red;
 }
 .output1{
     position: absolute;
@@ -54,4 +53,17 @@ body{
     position: absolute;
     bottom:0;
     left:15px;
+}
+.colon{
+    height:150px;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    margin-left:50px;
+    margin-right:30px;
+}
+.colon div{
+    width:10px;
+    height:10px;
+    background:red;
 }
