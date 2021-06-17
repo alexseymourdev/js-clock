@@ -13,7 +13,7 @@ function getCurrentTime(){
     //set the current time as hours, minutes and seconds
     let time = hours + ":" + minutes + ":" + seconds;
     // console.log(time);
-
+    // outputTimeVisualization(hours,'hours');
     //get clock output HTML object
     let output = document.querySelector('.clockOutput');
     // console.log(output);
@@ -24,3 +24,26 @@ function getCurrentTime(){
 }
 // Begins
 outputTime();
+
+// function outputTimeVisualization(time,type){
+//     switch(type){
+//         case 'hour':
+//             //output to 0 and 1
+//             //below is an example for 12am
+//             updateDigitalNumberDisplay(0,1);
+//             updateDigitalNumberDisplay(1,2);
+
+//             break;
+//         case 'minute':
+//             //output to 2 and 3
+//             break;       
+//         case 'second':
+//             // output to 4 and 5
+//             break;
+//     }
+// }
+// function updateDigitalNumberDisplay(key,number){
+//     let arrDisplays = document.querySelector('.digitalDisplay');
+//     let currentContainer = arrDisplays[key];
+    
+// }

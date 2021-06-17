@@ -1,3 +1,53 @@
 body{
     background:yellow;
 }
+.digitalNumberContainer{
+    position:relative;
+    width:80px;
+    height:150px;
+}
+.vertical{
+    width:10px;
+    height:50px;
+}
+.horizontal{
+    width:50px;
+    height:10px;
+}
+.output1{
+    position: absolute;
+    top:15px;
+    left:0;
+}
+.output2{
+    position: absolute;
+    top:0;
+    left:15px;
+}
+.output3{
+    position: absolute;
+    top:15px;
+    right:0;
+    background:none;
+}
+.output4{
+    position: absolute;
+    top:70px;
+    left:15px;
+}
+.output5{
+    position: absolute;
+    bottom:15px;
+    left:0px;
+    background:none;
+}
+.output6{
+    position: absolute;
+    bottom:15px;
+    right:0;
+}
+.output7{
+    position: absolute;
+    bottom:0;
+    left:15px;
+}
