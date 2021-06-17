@@ -1,6 +1,10 @@
 body{
     background:yellow;
 }
+.digitalClockContainer{
+    display:flex;
+    justify-content: space-between;
+}
 .digitalNumberContainer{
     position:relative;
     width:80px;
@@ -9,10 +13,12 @@ body{
 .vertical{
     width:10px;
     height:50px;
+    background:red;
 }
 .horizontal{
     width:50px;
     height:10px;
+    background:red;
 }
 .output1{
     position: absolute;
@@ -28,7 +34,6 @@ body{
     position: absolute;
     top:15px;
     right:0;
-    background:none;
 }
 .output4{
     position: absolute;
@@ -39,7 +44,6 @@ body{
     position: absolute;
     bottom:15px;
     left:0px;
-    background:none;
 }
 .output6{
     position: absolute;
